@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test page</title>
+</head>
+<body>
+    <div id="menuContainer"></div>
+
+
+
+
+    <style>
+        .menuItem {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f9f9f9;
+        }
+        #menuContainer{
+            display:flex;
+            border:1px solid red;
+            padding:20px;
+        }
+        .food-image{
+            width: 150px;
+        }
+    </style>
+    <script>
+        const pizzaMenuItems = [
+        { id: 1008, name: "Tapa Pizza", price: 172.5, image: "" },
+        { id: 1009, name: "Taco Pizza", price: 172.5, image: "" },
+        { id: 1010, name: "Hawaiian Pizza", price: 172.5, image: "" },
+        { id: 1011, name: "Cheese Pizza", price: 172.5, image: "" },
+        { id: 1012, name: "Ham & Cheese Pizza", price: 172.5, image: "" }
+            
+        ];
+
+      
+        const container = document.getElementById('menuContainer');
+
+
+        pizzaMenuItems.forEach((item, index) => {
+
+            const itemDiv = document.createElement('div');
+            itemDiv.classList.add('menuItem'); 
+            
+            const foodImage = document.createElement('img');
+            foodImage.src =`assets/${item.image}`;
+            foodImage.alt = item.name;
+            foodImage.classList.add('food-image');
+            
+
+            const nameP = document.createElement('p');
+            nameP.textContent = item.name;
+            
+
+            const priceP = document.createElement('p');
+            priceP.textContent = `$${item.price.toFixed(2)}`;
+
+
+            const button = document.createElement('button');
+            button.textContent = 'Add Order';
+
+
+            button.addEventListener('click', function(){
+                const itemId = item.id;
+                const itemPrice = item.price;   
+                const index = pizzaMenuItems.findIndex(menuItem => menuItem.id === item.id);
+
+                addOrderToList(itemId, itemPrice, index);
+            });
+
+            // Append the name, price, and button to the item div
+            itemDiv.appendChild(foodImage);
+            itemDiv.appendChild(nameP);
+            itemDiv.appendChild(priceP);
+            itemDiv.appendChild(button);
+
+            // Append the item div to the main container
+            container.appendChild(itemDiv);
+        });
+
+        
+        function addOrderToList(itemId, itemPrice, index){
+            console.log(`Item ID: ${itemId}`);
+            console.log(`Item Price: ${itemPrice}`);
+            console.log(`Index: ${index}`);
+        }
+
+        
+    </script>
+</body>
+</html>

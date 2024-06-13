@@ -1,0 +1,265 @@
+body{
+    background-color: #2C2F31;
+    color:white;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+.heading-top{
+    background-color: #21ad84;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-div ul{
+    display: flex;
+    column-gap: 35px;
+    
+}
+.socials-div{
+    display: flex;
+    column-gap: 15px;
+}
+
+.heading-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.menu-header{
+    /* border:solid 1px red; */
+    height: 100%;
+}
+.heading-text ul{
+    display:flex;
+    flex-direction: row;
+    column-gap: 20px;
+    height: 100%;
+   
+}
+.heading-text ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+    /* border: 1px solid blue; */
+    transition:0.5s;
+    
+}
+
+.heading-text ul li:hover{
+    background-color:#21ad84;
+}
+.heading-text ul li a{
+    text-decoration: none;
+    color:white;
+}
+.header-button{
+    background-color: rgba(0, 0, 0, 0);
+    border: 2px solid white;
+    color:white;
+    font-weight:600;
+    padding:5px 20px;
+    border-radius: 15px;
+    transition: 0.5s;
+    margin-right:20px;
+}
+.header-button:hover{
+    color:black;
+    background-color: white;
+}
+.heading-text{
+    height:100px;
+    width:100%;
+    background-color: #505050;
+    display:flex;
+    align-items: center;
+    color:white;
+}
+
+
+.hero{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.527),rgba(0, 0, 0, 0.5)) , url(assets/209-cover.jpg);
+    background-color: black;
+    display: flex;
+    justify-content: center;
+  }    
+.container-body{
+    /* border: red solid 1px; */
+    height: max-content;
+}
+.menu-and-list{
+    /* border: blue solid 1px; */
+    height: max-content;
+    display:flex;
+    margin: 20px;
+}
+.menu-container{
+    /* border: green solid 1px; */
+    height:max-content;
+    width:60%;
+    margin: 20px;
+    padding:10px;
+
+}
+.list-container-out{
+    padding:20px;
+    height:80vh;
+    width:30%;
+    margin: 20px;
+    top:0;
+}
+.list-container{
+    /* border: pink solid 1px; */
+    background-color: white;
+    color:#505050;
+    padding:20px;
+    height:80vh;
+    
+}
+
+/* menu container css */
+.foods-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.food-desc-button{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+    width:250px;
+    height:max-content;
+    padding:5px;
+}
+
+button{
+    background-color: white;
+    border:none;
+}
+
+
+.underTableDiv{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding:20px;
+}
+.divider{
+    width:95%;
+    border:2px solid black;
+    margin:auto;
+}
+
+aside{
+    width: 350px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    /* border: 1px solid #111; */
+}
+aside ul
+{
+    position: relative;
+    height: 200px;
+    top: 50%;
+    margin: -100px 0;
+
+}
+.sidebar-navigator li{
+    padding:25px 10px;
+    /* border:1px solid red; */
+    list-style: none;
+}
+
+.sidebar-navigator li a{
+    text-decoration: none;
+    color: white;
+}
+
+.sidebar-navigator li a[href]:target{
+    color:white !important;
+}
+/* sticky */
+
+aside, .list-container-out{
+    position:sticky;
+}
+
+#pizza-container, #rice-meal-container, #snack-container, #coffee-container, #drinks-container, #milktea-container, #iced-coffee-container, #frappe-container, #shakes-container{
+    display: flex;
+    row-gap: 10px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.food-box{
+    border-radius: 10px;
+    height:350px;
+    width:20%;
+    padding:20px;
+    background-color: #393D3F;
+    display: flex;
+    flex-direction:column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.food-box button{
+    /* border:1px solid; */
+
+
+}
+
+.food-image-class{
+    width: 150px;
+    height:150px;
+    border-radius:50%;
+    
+}
+
+.food-name-class{
+    font-size:15px ;
+}
+
+.order-item-row {
+    display: flex;
+    flex-direction: row;
+    /* column-gap: 100px; */
+    justify-content: space-between;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 15px 5px 0px 15px;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.ordered-food-position {
+    overflow: scroll;
+    height: 400px;
+}
+
+.foodValueTextBox {
+    display:hidden;
+}
